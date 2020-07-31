@@ -36,11 +36,20 @@ and should return a number.
 
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
 
+const burger1 = {
+  name: "burger",
+  price: 18,
+  category: "Lunch",
+  discount: function(str) {
+    if (str === "teacher" || str === "student") {
+      return this.price * .75
+    } else {
+      return this.price * .90
+    }
+  }
+};
 
-let discount = "teacher, student, or public";
-
-burger.discount("teacher")
-
+console.log(burger1.discount("teacher"))
 
 ///////////////Reviews (MVP)///////////////////
 
@@ -56,9 +65,7 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 
 /* Task 3: Console.log just Julius' feedback */
 
-console.log(name[5]);
-
-
+console.log(reviews[5]["feedback"])
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 
@@ -70,7 +77,7 @@ function addReview(name, rating, feedback) {
   };
 }
 
-console.log(addReview("Drew", 3, "The food was good but not amazing"));
+// console.log(addReview("Drew", 3, "The food was good but not amazing"));
 
 
 
