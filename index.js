@@ -69,22 +69,18 @@ console.log(reviews[5]["feedback"])
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 
-function addReview(name, rating, feedback) {
-  return {
-    name,
-    rating,
-    feedback,
-  };
-}
+reviews.push(
+    {name: "Drew", rating: 4, feedback: "My favorite resturant!"}
+)
 
-// console.log(addReview("Drew", 3, "The food was good but not amazing"));
+console.log(reviews[8])
 
 
 
-/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
+// Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
 
-
-
+reviews[7].feedback = "The food was really enjoyable but the ambiance could've been better.";
+console.log(reviews[7].feedback);
 
 
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
